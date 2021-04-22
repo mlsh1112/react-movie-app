@@ -5,9 +5,9 @@ import Movie from './movie'
 // Render: componentWillMount() -> render() -> compoenetDidMount()
 // Update: componentWillReciveProps() {컴포넌트가 새로운 props를 받았다} -> shouldCompoenentUpdate() 
 class App extends Component {
-  state={
-    
-  }
+  state={}
+
+  
   componentDidMount(){
     setTimeout(()=>{
       this.setState({

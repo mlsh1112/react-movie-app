@@ -2,32 +2,29 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './movie.css';
 
-class movie extends Component {
-    
-    static propTypes={
-        title:PropTypes.string,
-        poster:PropTypes.string
-    }
-    render() {
-        return (
-            <div>
-                <MoviePoster poster={this.props.poster}/>
-                <h2>{this.props.title}</h2>
+function movie({title,poster}){
+    return(
+        <div>
+                <MoviePoster poster={poster}/>
+                <h2>{title}</h2>
                 
-            </div>
-        );
-    }
+        </div>
+    )
 }
 
-class MoviePoster extends Component{
-    static propTypes={
-        poster:PropTypes.string.isRequired
-    }
-    render(){
-        return(
-            <img src={this.props.poster}/>
-        )
-    }
+//dump component
+//funtional component -> no state / no renser / no life cyle/ onlt return
+function MoviePoster({poster}){
+    return(
+        <img src={poster}/>
+    )
+}
+movie.propTypes={
+    title:PropTypes.string.isRequired,
+    poster:PropTypes.string.isRequired
 }
 
+MoviePoster.propTypes={
+    poster:PropTypes.string.isRequired
+}
 export default movie;
