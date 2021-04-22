@@ -6,27 +6,12 @@ import Movie from './movie'
 // Update: componentWillReciveProps() {컴포넌트가 새로운 props를 받았다} -> shouldCompoenentUpdate() 
 class App extends Component {
   state={}
-
   
   componentDidMount(){
-    setTimeout(()=>{
-      this.setState({
-        movies:[
-          {
-            title:'frozen2',
-            poster:'https://i.pinimg.com/originals/95/13/d3/9513d3d862a31ba2a505e2f98e64f346.jpg'
-          },
-          {
-            title:'Soul',
-            poster:'https://www.robertfantozzi.com/wp-content/uploads/2020/12/Soul1.jpg'
-          },
-          {
-            title:'insideout',
-            poster:'http://ticketimage.interpark.com/Movie/still_image/V15/V1501448p_s01.gif'
-          }
-        ]
-      })
-    },2000)
+    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
+    .then(res=>res.json())
+    .then(json=>console.log(json))
+    .catch(err=>console.log(err))
   }
 
   _renderMoives = () => {
