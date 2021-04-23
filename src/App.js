@@ -7,20 +7,16 @@ import Movie from './movie'
 class App extends Component {
   state={}
   
-  //작은 function들이 각기 다른 장소에 있는 것이 좋음
   componentDidMount(){
     this._getMovies();
   }
 
-  _getMovies=  async ()=>{ // 이전 라인의 작업이 끝날때까지 기다리는 것이 아닐 때 / 순서와 상관없이 진행된다
+  _getMovies= async ()=>{ 
     const movies = await this._callApi(); 
-    //await는 call api 기능이 끝나는 것을 기다린다. -> 성공적으로 수행이 아닌 그냥 끝나기만을 기다림
     this.setState({
       movies : movies
-    }) // call api 작업이 끝날 때 까지 실행되지 않는다.
-
-
-  }
+  })
+}
 
   _callApi=()=>{
     //fetch라는 promise를 return 한ㄷㅏ.
@@ -31,8 +27,16 @@ class App extends Component {
   }
 
   _renderMoives = () => {
-    const movies= this.state.movies.map((movie,index) =>{
-      return < Movie title={movie.title} poster={movie.large_cover_image} key={index} />
+    //index를 사용하면 느리다 id로 사용
+    const movies= this.state.movies.map(movie =>{
+      
+      return < Movie 
+      title={movie.title_english} 
+      poster={movie.medium_cover_image} 
+      key={movie.id} 
+      genres={movie.genres}
+      synopsis={movie.synopsis}
+       />
       })
       return movies
   }
