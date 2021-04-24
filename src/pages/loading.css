@@ -1,0 +1,25 @@
+.movielist{
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.loading{
+    height: 700px;
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btnhome{
+    margin-left: 100px;
+    margin-bottom: 10px;
+    background-color:rgb(24, 24, 24);
+    font-size: large;
+    font-weight: bold;
+    color:white;
+}

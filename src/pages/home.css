@@ -1,9 +1,16 @@
 .home{
     background-color: black;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20%;
+    margin-bottom: 300px;
 }
-
-.home-loading{
-    background-color: black;
-
-    justify-content: center;
+.btn{
+    color: white;
+    margin-top: 20px;
+}
+.select{
+    margin-bottom: 10px;
+    width: 500px;
 }
