@@ -1,3 +1,8 @@
 .App {
-
+    padding: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 14px;
+    background-color: black;
+    color: white;
 }
