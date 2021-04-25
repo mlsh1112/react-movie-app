@@ -37,7 +37,7 @@ class loading extends Component {
           return filtermovies
       }
       _goHome = () =>{
-        this.props.history.push('/')
+        this.props.history.push('/react-movie-app')
       }
     render() {
         const genre=this.props.match.params.genre

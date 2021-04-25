@@ -12,8 +12,8 @@ class App extends Component {
     return (
         <div className="App">
           <BrowserRouter>
-          <Route exact path='/' component={home}/>
-          <Route exact path='/loading/:genre' component={loading}/>
+          <Route exact path='/react-movie-app' component={home}/>
+          <Route exact path='/react-movie-app/loading/:genre' component={loading}/>
           </BrowserRouter>
         </div>
       );

@@ -26,7 +26,7 @@ class home extends Component {
                     </label>
                 </form>
                 <div >
-                <Link className='btn' to={`loading/${this.state.genre}`}> FIND {this.state.genre} Movie!</Link>
+                <Link className='btn' to={`/react-movie-app/loading/${this.state.genre}`}> FIND {this.state.genre} Movie!</Link>
                 </div>
             </div>
         );
